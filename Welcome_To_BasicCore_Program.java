@@ -2,24 +2,22 @@ package com.Basic.Program;
 import java.util.Scanner;
 public class Welcome_To_BasicCore_Program {
 	public static void main(String[] args) {
-        int num; int  mul =1 ;
-	
+
+		
+		double result = 0, num = 0, j;
+		int n;
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the Power Value N:");
-		num =sc.nextInt();
-		if (num > 31) {
-			System.out.println("value of number should be less than 31");
-			return;
+
+		
+		System.out.print("enter the harmonic you want to find: ");
+		n = sc.nextInt();
+
+		
+		for (j = 1; j <= n; j++) {
+			num = num + (1 / j);
+			result = num;
 		}
+		System.out.println("the value of harmonic no. " + n + " is: " + result);
 
-		else {
-			System.out.println(mul);
-			for (int j = 1; j <= num; j++) {
-				mul = mul * 2;
-				System.out.println(mul);
-			}
-		}
-
-	}
-
+}
 }
