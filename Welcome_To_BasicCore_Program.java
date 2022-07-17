@@ -1,23 +1,16 @@
 package com.Basic.Program;
-import java.util.Scanner;
+
 public class Welcome_To_BasicCore_Program {
-	static int n;
 	public static void main(String[] args) {
 
-		
-		Scanner sc = new Scanner(System.in);
-	      System.out.println("Enter the any number:");
-	      n = sc.nextInt();
-	      System.out.print("The Prime Factors of " + n + " are : ");
+		int dividend = 25, divisor = 25 ;
 
-			int i = 2;
-			while (n > 1) {
-				if (n % i == 0) {
-					System.out.print(i + " ");
-					n = n / i;
-				} else
-					i++;
-			}
-			System.out.println(" ");
+	    int quotient = dividend / divisor;
+	    int remainder = dividend % divisor;
+
+	    System.out.println("Quotient = " + quotient);
+	    System.out.println("Remainder = " + remainder);
+	  
 	}
-		}
+
+}
