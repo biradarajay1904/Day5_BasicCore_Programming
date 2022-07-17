@@ -4,20 +4,24 @@ public class Welcome_To_BasicCore_Program {
 	public static void main(String[] args) {
 
 		
-		double result = 0, num = 0, j;
-		int n;
-		Scanner sc = new Scanner(System.in);
-
-		
-		System.out.print("enter the harmonic you want to find: ");
-		n = sc.nextInt();
-
-		
-		for (j = 1; j <= n; j++) {
-			num = num + (1 / j);
-			result = num;
+		int h_cnt = 0; int t_cnt = 0;
+		Scanner Scan = new Scanner(System.in);
+		System.out.println("Enter the no of times to flip a coin:");
+		int n = Scan.nextInt();
+		for (int i = 1; i < n; i++) {
+			double flip = Math.floor(Math.random() * 10) % 2;
+			if (flip< 0.5) {
+				h_cnt++;
+			} else {
+				t_cnt++;
+			}
+			
 		}
-		System.out.println("the value of harmonic no. " + n + " is: " + result);
-
-}
+		double headpercentage = (h_cnt* 100) /n;
+		double tailpercentage = (t_cnt * 100) /n;
+		System.out.println("The percentage of head flips:" + headpercentage);
+		System.out.println("The percentage of tail flips:" + tailpercentage);
+		
+		
+	}
 }
