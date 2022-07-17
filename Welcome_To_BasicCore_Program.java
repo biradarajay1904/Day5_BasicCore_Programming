@@ -1,16 +1,25 @@
 package com.Basic.Program;
 
 public class Welcome_To_BasicCore_Program {
+	static int first= 12;  static int second = 14;
 	public static void main(String[] args) {
+		System.out.println("--Before swap--");
+        System.out.println("First number = " + first);
+        System.out.println("Second number = " + second);
 
-		int dividend = 25, divisor = 25 ;
+        // Value of first is assigned to temporary
+        int  temporary = first;
 
-	    int quotient = dividend / divisor;
-	    int remainder = dividend % divisor;
+        // Value of second is assigned to first
+        first = second;
 
-	    System.out.println("Quotient = " + quotient);
-	    System.out.println("Remainder = " + remainder);
-	  
+        // Value of temporary (which contains the initial value of first) is assigned to second
+        second = temporary;
+
+        System.out.println("--After swap--");
+        System.out.println("First number = " + first);
+        System.out.println("Second number = " + second);
+		
 	}
 
 }
